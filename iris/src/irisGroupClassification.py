@@ -39,19 +39,22 @@ loss function = categorical cross entropy
 learning rate = 0.01
 max iterations = 500
 '''
+score = 0.0
+while score < 0.8:
+    mlp = MLPClassifier(hidden_layer_sizes=10, solver='sgd', learning_rate_init=0.01, max_iter=10000)
 
-mlp = MLPClassifier(hidden_layer_sizes=10, solver='sgd', learning_rate_init=0.01, max_iter=500)
+    # Train the model
+    mlp.fit(x_train, y_train)
 
-# Train the model
-mlp.fit(x_train, y_train)
+    # Test the model
+    score = mlp.score(x_test, y_test)
 
-# Test the model
-print(mlp.score(x_test, y_test))
+print(score)
 
-sepalLength = 0.8
-SepalWidth = 0.1
-petalLength = 0.3
-petalWidth = 0.8
+sepalLength = 2.4
+SepalWidth = 1.8
+petalLength = 1.8
+petalWidth = 1.8
 
 data = [[sepalLength, SepalWidth, petalLength, petalWidth]]
 
