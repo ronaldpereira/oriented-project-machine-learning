@@ -51,11 +51,12 @@ while score < 0.8:
 
 print(score)
 
+# Creates a custom data and predicts it's group
 sepalLength = 2.4
 SepalWidth = 1.8
 petalLength = 1.8
 petalWidth = 1.8
 
-data = [[sepalLength, SepalWidth, petalLength, petalWidth]]
+customData = [[sepalLength, SepalWidth, petalLength, petalWidth]]
 
-print(mlp.predict(x_test))
+print(mlp.predict(customData))
