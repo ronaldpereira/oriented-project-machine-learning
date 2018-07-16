@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+import numpy as np
 import pandas as pd
 import random
 import sys
@@ -16,41 +16,41 @@ warnings.filterwarnings('ignore')
 irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
 # Transform specie string value to positive (1) and negative (0)
-irisDataset.loc[irisDataset['Species'] == 'Iris-setosa', 'Species'] = 0
-irisDataset.loc[irisDataset['Species'] == 'Iris-versicolor', 'Species'] = 0
-irisDataset.loc[irisDataset['Species'] == 'Iris-virginica', 'Species'] = 1
+for species in ['Iris-virginica','Iris-setosa','Iris-versicolor']:
+    irisDataset['y'] = irisDataset['Species'] == species
+    print(np.array(irisDataset['y']))
 
-# Converts all values to numeric
-irisDataset = irisDataset.apply(pd.to_numeric)
+    # Converts all values to numeric
+    #irisDataset = irisDataset.apply(pd.to_numeric)
 
-# Convert dataframe to matrix
-irisDataset = irisDataset.values
+    # Convert dataframe to matrix
+    #irisDataset = irisDataset.values
 
-# Splits x and y (features and target)
-train_size = int(sys.argv[1])
+    # Splits x and y (features and target)
+    train_size = int(sys.argv[1])
 
-x_train, x_test, y_train, y_test = train_test_split(
-    irisDataset[:, 1:5], irisDataset[:, 5].astype('int'), train_size=train_size)
+    x_train, x_test, y_train, y_test = train_test_split(
+        irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
 
-logReg = LogisticRegression()
+    logReg = LogisticRegression()
 
-# Train the model
-logReg.fit(x_train, y_train)
+    # Train the model
+    logReg.fit(x_train, y_train)
 
-# Test the model
-y_predict = logReg.predict(x_test)
+    # Test the model
+    y_predict = logReg.predict(x_test)
 
-score = f1_score(y_test, y_predict)
+    score = f1_score(y_test, y_predict)
 
-print('f1-score:', score)
+    print('f1-score:', score)
 
-print(logReg.predict(x_test), y_test, sep='\n')
+    print(logReg.predict(x_test), y_test, sep=' ')
 
-sepalLength = 2.4
-SepalWidth = 1.8
-petalLength = 1.8
-petalWidth = 1.8
+    sepalLength = 2.4
+    SepalWidth = 1.8
+    petalLength = 1.8
+    petalWidth = 1.8
 
-customData = [[sepalLength, SepalWidth, petalLength, petalWidth]]
+    customData = [[sepalLength, SepalWidth, petalLength, petalWidth]]
 
-print(logReg.predict(customData))
+    print(logReg.predict(customData))
