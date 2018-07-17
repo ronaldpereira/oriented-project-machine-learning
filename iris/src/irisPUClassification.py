@@ -15,14 +15,12 @@ from pywsl.utils.comcalc import bin_clf_err
 import warnings
 warnings.filterwarnings('ignore')
 
-pd.set_option('display.max_rows', 150)
-
 # Transform specie string value to positive (1) and negative (0)
 for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     # Loads the iris csv dataset
     irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
-    print(specie)
+    print('###', specie)
 
     numberOfPositives = 0
     for index, sp in enumerate(irisDataset.loc[:, 'Species'].sample(frac=1)):
@@ -48,8 +46,6 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
 
     score = bin_clf_err(y_test, y_predict, prior=.5)
 
-    print('bin_clf_err:\n', score)
+    print('\nbin_clf_err:\n\n', score)
 
-    print('Confusion Matrix:\n', confusion_matrix(y_test, y_predict))
-
-    print('\n')
+    print('\nConfusion Matrix:\n\n', confusion_matrix(y_test, y_predict))

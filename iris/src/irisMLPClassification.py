@@ -52,10 +52,10 @@ y_predict = mlp.predict(x_test)
 # Test the model
 score = f1_score(y_test, y_predict, average='micro')
 
-print('f1-score:', score)
+print('\nf1-score:\n\n', score)
 
-print('Confusion Matrix:\n', confusion_matrix(y_test, y_predict))
+print('\nConfusion Matrix:\n\n', confusion_matrix(y_test, y_predict))
 
 cross_val = cross_val_score(mlp, x_train, y_train, cv=5)
 
-print('Cross-validation:\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))
+print('\nCross-validation:\n\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))

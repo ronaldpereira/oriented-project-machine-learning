@@ -19,7 +19,7 @@ irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
 # Transform specie string value to positive (1) and negative (0)
 for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
-    print(species)
+    print('###', species)
     irisDataset['y'] = irisDataset['Species'] == species
 
     # Splits x and y (features and target)
@@ -38,10 +38,10 @@ for species in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
 
     score = f1_score(y_test, y_predict)
 
-    print('f1-score:\n', score)
+    print('\nf1-score:\n\n', score)
 
-    print('Confusion Matrix:\n', confusion_matrix(y_test, y_predict))
+    print('\nConfusion Matrix:\n\n', confusion_matrix(y_test, y_predict))
 
     cross_val = cross_val_score(logReg, x_train, y_train, cv=5)
 
-    print('Cross-validation:\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))
+    print('\nCross-validation:\n\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))
