@@ -7,6 +7,7 @@ from sklearn.model_selection import train_test_split
 # Imports logistic regression model
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score
+from sklearn.metrics import confusion_matrix
 
 # Ignore warnings
 import warnings
@@ -18,13 +19,6 @@ irisDataset = pd.read_csv('../input/iris_dataset.csv')
 # Transform specie string value to positive (1) and negative (0)
 for species in ['Iris-virginica','Iris-setosa','Iris-versicolor']:
     irisDataset['y'] = irisDataset['Species'] == species
-    print(np.array(irisDataset['y']))
-
-    # Converts all values to numeric
-    #irisDataset = irisDataset.apply(pd.to_numeric)
-
-    # Convert dataframe to matrix
-    #irisDataset = irisDataset.values
 
     # Splits x and y (features and target)
     train_size = int(sys.argv[1])
@@ -42,15 +36,6 @@ for species in ['Iris-virginica','Iris-setosa','Iris-versicolor']:
 
     score = f1_score(y_test, y_predict)
 
-    print('f1-score:', score)
+    print('f1-score:\n', score)
 
-    print(logReg.predict(x_test), y_test, sep=' ')
-
-    sepalLength = 2.4
-    SepalWidth = 1.8
-    petalLength = 1.8
-    petalWidth = 1.8
-
-    customData = [[sepalLength, SepalWidth, petalLength, petalWidth]]
-
-    print(logReg.predict(customData))
+    print('Confusion Matrix:\n', confusion_matrix(y_test, y_predict))
