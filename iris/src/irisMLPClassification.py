@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 # Imports multi-layer perceptron classifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import f1_score
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import cross_val_score
 
 # Ignore warnings
 import warnings
@@ -52,14 +54,8 @@ score = f1_score(y_test, y_predict, average='micro')
 
 print('f1-score:', score)
 
-print(mlp.predict(x_test), y_test, sep='\n')
+print('Confusion Matrix:\n', confusion_matrix(y_test, y_predict))
 
-# Creates a custom data and predicts it's group
-sepalLength = 2.4
-SepalWidth = 1.8
-petalLength = 1.8
-petalWidth = 1.8
+cross_val = cross_val_score(mlp, x_train, y_train, cv=5)
 
-customData = [[sepalLength, SepalWidth, petalLength, petalWidth]]
-
-print(mlp.predict(customData))
+print('Cross-validation:\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))
