@@ -8,8 +8,8 @@ PrintHeader:
 	echo '# Machine Learning Results:' > $(OUTPUT)
 
 MLP:
-	echo '## Multi-layer Perceptron:' >> $(OUTPUT)
-	python3 irisMLPClassification.py >> $(OUTPUT)
+	echo '## Multi-layer Perceptron with training size = $(TRAIN_SIZE):' >> $(OUTPUT)
+	python3 irisMLPClassification.py $(TRAIN_SIZE) >> $(OUTPUT)
 
 LogReg:
 	echo '## Logistic Regression with training size = $(TRAIN_SIZE):' >> $(OUTPUT)

@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 import pandas as pd
 import random
 from sklearn.model_selection import train_test_split
@@ -27,9 +28,10 @@ irisDataset = irisDataset.apply(pd.to_numeric)
 # Convert dataframe to matrix
 irisDataset = irisDataset.values
 
+train_size = int(sys.argv[1])
 # Splits x and y (features and target)
 x_train, x_test, y_train, y_test = train_test_split(
-    irisDataset[:, 1:5], irisDataset[:, 5].astype('int'), train_size=0.8)
+    irisDataset[:, 1:5], irisDataset[:, 5].astype('int'), train_size=train_size)
 
 '''
 Multilayer perceptron model, with one hidden layer.

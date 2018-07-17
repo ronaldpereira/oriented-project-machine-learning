@@ -1,5 +1,5 @@
 # Machine Learning Results:
-## Multi-layer Perceptron:
+## Multi-layer Perceptron with training size = 120:
 
 f1-score:
 
@@ -7,13 +7,13 @@ f1-score:
 
 Confusion Matrix:
 
- [[ 8  0  0]
- [ 0 10  1]
- [ 0  0 11]]
+ [[11  0  0]
+ [ 0  9  1]
+ [ 0  0  9]]
 
 Cross-validation:
 
-Accuracy: 0.91 (+/- 0.13)
+Accuracy: 0.91 (+/- 0.12)
 
 
 ## Logistic Regression with training size = 120:
@@ -46,7 +46,7 @@ Confusion Matrix:
 
 Cross-validation:
 
-Accuracy: 0.65 (+/- 0.06)
+Accuracy: 0.65 (+/- 0.09)
 
 
 ### Iris-virginica
@@ -62,7 +62,7 @@ Confusion Matrix:
 
 Cross-validation:
 
-Accuracy: 0.97 (+/- 0.02)
+Accuracy: 0.97 (+/- 0.03)
 
 
 ## Positive-Unlabeled Classification with training size = 120 and positive size = 10:
@@ -75,27 +75,27 @@ bin_clf_err:
 Confusion Matrix:
 
  [[ 0  0  0]
- [27  0  1]
- [ 2  0  0]]
+ [25  0  5]
+ [ 0  0  0]]
 ### Iris-versicolor
 
 bin_clf_err:
 
- 1.0
+ 0.9
 
 Confusion Matrix:
 
  [[ 0  0  0]
- [23  0  5]
- [ 2  0  0]]
+ [24  0  4]
+ [ 1  0  1]]
 ### Iris-virginica
 
 bin_clf_err:
 
- 0.875
+ 0.8888888888888888
 
 Confusion Matrix:
 
  [[ 0  0  0]
- [26  0  3]
- [ 0  0  1]]
+ [21  0  7]
+ [ 0  0  2]]
