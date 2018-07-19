@@ -7,13 +7,13 @@ f1-score:
 
 Confusion Matrix:
 
- [[11  0  0]
+ [[10  0  0]
  [ 0  9  1]
- [ 0  0  9]]
+ [ 0  0 10]]
 
 Cross-validation:
 
-Accuracy: 0.91 (+/- 0.12)
+Accuracy: 0.72 (+/- 0.31)
 
 
 ## Logistic Regression with training size = 120:
@@ -37,32 +37,32 @@ Accuracy: 1.00 (+/- 0.00)
 
 f1-score:
 
- 0.30769230769230765
+ 0.28571428571428575
 
 Confusion Matrix:
 
- [[19  1]
+ [[18  2]
  [ 8  2]]
 
 Cross-validation:
 
-Accuracy: 0.65 (+/- 0.09)
+Accuracy: 0.67 (+/- 0.07)
 
 
 ### Iris-virginica
 
 f1-score:
 
- 1.0
+ 0.9523809523809523
 
 Confusion Matrix:
 
- [[20  0]
+ [[19  1]
  [ 0 10]]
 
 Cross-validation:
 
-Accuracy: 0.97 (+/- 0.03)
+Accuracy: 0.98 (+/- 0.02)
 
 
 ## Positive-Unlabeled Classification with training size = 120 and positive size = 10:
@@ -81,21 +81,21 @@ Confusion Matrix:
 
 bin_clf_err:
 
- 0.9
+ 0.9166666666666667
 
 Confusion Matrix:
 
  [[ 0  0  0]
- [24  0  4]
+ [23  0  5]
  [ 1  0  1]]
 ### Iris-virginica
 
 bin_clf_err:
 
- 0.8888888888888888
+ 0.8333333333333333
 
 Confusion Matrix:
 
  [[ 0  0  0]
- [21  0  7]
- [ 0  0  2]]
+ [22  0  4]
+ [ 2  0  2]]

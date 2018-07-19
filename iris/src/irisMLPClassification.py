@@ -18,20 +18,14 @@ warnings.filterwarnings('ignore')
 irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
 # Transform specie string value to int (0 = 'Iris-setosa', 1 = 'Iris-versicolor', 2 = 'Iris-virginica')
-irisDataset.loc[irisDataset['Species'] == 'Iris-setosa', 'Species'] = 0
-irisDataset.loc[irisDataset['Species'] == 'Iris-versicolor', 'Species'] = 1
-irisDataset.loc[irisDataset['Species'] == 'Iris-virginica', 'Species'] = 2
-
-# Converts all values to numeric
-irisDataset = irisDataset.apply(pd.to_numeric)
-
-# Convert dataframe to matrix
-irisDataset = irisDataset.values
+irisDataset.loc[irisDataset['Species'] == 'Iris-setosa', 'y'] = 0
+irisDataset.loc[irisDataset['Species'] == 'Iris-versicolor', 'y'] = 1
+irisDataset.loc[irisDataset['Species'] == 'Iris-virginica', 'y'] = 2
 
 train_size = int(sys.argv[1])
 # Splits x and y (features and target)
 x_train, x_test, y_train, y_test = train_test_split(
-    irisDataset[:, 1:5], irisDataset[:, 5].astype('int'), train_size=train_size)
+    irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
 
 '''
 Multilayer perceptron model, with one hidden layer.
