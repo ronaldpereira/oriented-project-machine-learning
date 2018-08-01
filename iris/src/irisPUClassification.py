@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 import numpy as np
 import pandas as pd
+
 import random
 import sys
+
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import f1_score, confusion_matrix
 from sklearn.model_selection import cross_val_score
 
 from pywsl.pul import pu_mr
@@ -44,8 +45,10 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     # Test the model
     y_predict = pu_sl.predict(x_test)
 
+    # Binary clf error calculation
     score = bin_clf_err(y_test, y_predict, prior=.5)
-
     print('\nbin_clf_err:\n\n', score)
 
-    print('\nConfusion Matrix:\n\n', confusion_matrix(y_test, y_predict))
+    # Confusion Matrix calculation
+    conf_matrix = confusion_matrix(y_test, y_predict)
+    print('\nConfusion Matrix:\n\n', conf_matrix)

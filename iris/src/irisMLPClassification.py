@@ -1,13 +1,14 @@
-#!/usr/bin/python3
-
+#!/usr/bin/python3=
 import sys
 import pandas as pd
+import matplotlib.pyplot as plt
+
 import random
+
 from sklearn.model_selection import train_test_split
 # Imports multi-layer perceptron classifier
 from sklearn.neural_network import MLPClassifier
-from sklearn.metrics import f1_score
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import cross_val_score
 
 # Ignore warnings
@@ -45,13 +46,15 @@ mlp.fit(x_train, y_train)
 # Test the model
 y_predict = mlp.predict(x_test)
 
-# Test the model
+# F1 Score calculation
 score = f1_score(y_test, y_predict, average='micro')
 
 print('\nf1-score:\n\n', score)
 
-print('\nConfusion Matrix:\n\n', confusion_matrix(y_test, y_predict))
+# Confusion Matrix calculation
+conf_matrix =  confusion_matrix(y_test, y_predict)
+print('\nConfusion Matrix:\n\n', conf_matrix)
 
+# Cross Validation score calculation
 cross_val = cross_val_score(mlp, x_train, y_train, cv=5)
-
 print('\nCross-validation:\n\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))
