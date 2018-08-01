@@ -76,4 +76,4 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylabel('True Positive Rate')
     plt.title('Receiver operating characteristic example')
     plt.legend(loc="lower right")
-    plt.savefig('rocCurves/logReg/' + specie + '.png')
+    plt.savefig('../output/rocCurves/logReg/' + specie + '.png')
