@@ -33,7 +33,7 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     logReg = LogisticRegression()
 
     # Train the model
-    probs = logReg.fit(x_train, y_train).predict_proba(x_test)[:, 1]
+    logReg.fit(x_train, y_train)
 
     # Test the model
     y_predict = logReg.predict(x_test)
@@ -57,12 +57,11 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     roc_auc = dict()
     y_test_values = y_test.values
 
-    fpr[0], tpr[0], _ = roc_curve(y_test_values, probs)
+    fpr[0], tpr[0], _ = roc_curve(y_test_values, y_predict)
     roc_auc[0] = auc(fpr[0], tpr[0])
 
-    print(probs)
     # Compute micro-average ROC curve and ROC area
-    fpr["micro"], tpr["micro"], _ = roc_curve(y_test_values, probs)
+    fpr["micro"], tpr["micro"], _ = roc_curve(y_test_values, y_predict)
     roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
     plt.figure()

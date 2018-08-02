@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 import random
 import sys
 
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import f1_score, confusion_matrix
+from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import cross_val_score
 
 from pywsl.pul import pu_mr
@@ -52,3 +53,30 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     # Confusion Matrix calculation
     conf_matrix = confusion_matrix(y_test, y_predict)
     print('\nConfusion Matrix:\n\n', conf_matrix)
+
+    # ROC Curve calculation
+    fpr = dict()
+    tpr = dict()
+    roc_auc = dict()
+    y_test_values = y_test.values
+
+    fpr[0], tpr[0], _ = roc_curve(y_test_values, y_predict)
+    roc_auc[0] = auc(fpr[0], tpr[0])
+
+    # Compute micro-average ROC curve and ROC area
+    fpr["micro"], tpr["micro"], _ = roc_curve(y_test_values, y_predict)
+    roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
+
+    plt.figure()
+    lw = 2
+    plt.plot(fpr[0], tpr[0], color='darkorange',
+            lw=lw, label='ROC curve (area = %0.2f)' % roc_auc[0])
+    plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver operating characteristic example')
+    plt.legend(loc="lower right")
+    plt.savefig('../output/rocCurves/pu/' + specie + '.png')
+

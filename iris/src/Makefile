@@ -1,5 +1,5 @@
 OUTPUT = README.md
-TRAIN_SIZE = 120
+TRAIN_SIZE = 30
 POSITIVE_SIZE = 10
 
 generateResults: PrintHeader MLP LogReg PU
