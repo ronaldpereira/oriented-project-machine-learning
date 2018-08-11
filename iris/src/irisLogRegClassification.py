@@ -12,23 +12,26 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import cross_val_score
 
+from pulib.pu_data import pn_from_dataframe, pu_from_y_train
+
 # Ignore warnings
 import warnings
 warnings.filterwarnings('ignore')
 
-# Loads the iris csv dataset
-irisDataset = pd.read_csv('../input/iris_dataset.csv')
-
-# Transform specie string value to positive (1) and negative (0)
 for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
+    # Loads the iris csv dataset
+    irisDataset = pd.read_csv('../input/iris_dataset.csv')
+
     print('###', specie)
-    irisDataset['y'] = irisDataset['Species'] == specie
+    irisDataset = pn_from_dataframe(irisDataset, 'Species', specie)
 
     # Splits x and y (features and target)
     train_size = int(sys.argv[1])
 
     x_train, x_test, y_train, y_test = train_test_split(
         irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
+
+    y_train = pu_from_y_train(y_train, int(sys.argv[2]))
 
     logReg = LogisticRegression()
 
@@ -39,7 +42,7 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     y_predict = logReg.predict(x_test)
 
     # F1 score calculation
-    score = f1_score(y_test, y_predict)
+    score = f1_score(y_test, y_predict, average='macro')
 
     print('\nf1-score:\n\n', score)
 
@@ -52,9 +55,9 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     print('\nCross-validation:\n\nAccuracy: %0.2f (+/- %0.2f)\n\n' %(cross_val.mean(), cross_val.std()))
 
     # ROC Curve calculation
-    fpr = dict()
-    tpr = dict()
-    roc_auc = dict()
+    fpr = {}
+    tpr = {}
+    roc_auc = {}
     y_test_values = y_test.values
 
     fpr[0], tpr[0], _ = roc_curve(y_test_values, y_predict)

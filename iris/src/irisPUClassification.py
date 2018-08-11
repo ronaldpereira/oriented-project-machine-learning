@@ -13,35 +13,32 @@ from sklearn.model_selection import cross_val_score
 from pywsl.pul import pu_mr
 from pywsl.utils.comcalc import bin_clf_err
 
+from pulib.pu_data import pn_from_dataframe, pu_from_y_train
+
 # Ignore warnings
 import warnings
 warnings.filterwarnings('ignore')
 
-# Transform specie string value to positive (1) and negative (0)
 for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     # Loads the iris csv dataset
     irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
     print('###', specie)
 
-    numberOfPositives = 0
-    for index, sp in enumerate(irisDataset.loc[:, 'Species'].sample(frac=1)):
-        if sp == specie and numberOfPositives < int(sys.argv[2]):
-            irisDataset.loc[index, 'y'] = 1
-            numberOfPositives += 1
-        else:
-            irisDataset.loc[index, 'y'] = 0
+    irisDataset = pn_from_dataframe(irisDataset, 'Species', specie)
             
     # Splits x and y (features and target)
     train_size = int(sys.argv[1])
 
     x_train, x_test, y_train, y_test = train_test_split(
-        irisDataset.drop(['Id','Species', 'y'],axis=1), irisDataset['y'], train_size=train_size, stratify=irisDataset['Species'])
+        irisDataset.drop(['Id','Species', 'y'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['y'])
 
     pu_sl = pu_mr.PU_SL()
 
+    y_train = pu_from_y_train(y_train, int(sys.argv[2]))
+
     # Train the model
-    pu_sl.fit(x_train, y_train)
+    pu_sl.fit(x_train, y_train.values)
 
     # Test the model
     y_predict = pu_sl.predict(x_test)
@@ -55,9 +52,9 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     print('\nConfusion Matrix:\n\n', conf_matrix)
 
     # ROC Curve calculation
-    fpr = dict()
-    tpr = dict()
-    roc_auc = dict()
+    fpr = {}
+    tpr = {}
+    roc_auc = {}
     y_test_values = y_test.values
 
     fpr[0], tpr[0], _ = roc_curve(y_test_values, y_predict)
