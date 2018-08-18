@@ -12,7 +12,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import cross_val_score
 
-from pulib.pu_data import pn_from_dataframe, pu_from_y_train
+from pulib.pu_data import pn_from_dataframe, pos_from_y_train
 
 # Ignore warnings
 import warnings
@@ -24,6 +24,7 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
 
     print('###', specie)
     irisDataset = pn_from_dataframe(irisDataset, 'Species', specie)
+    irisDataset['y'].loc[irisDataset['y'] == -1] = 0
 
     # Splits x and y (features and target)
     train_size = int(sys.argv[1])
@@ -31,7 +32,7 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     x_train, x_test, y_train, y_test = train_test_split(
         irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
 
-    y_train = pu_from_y_train(y_train, int(sys.argv[2]))
+    y_train = pos_from_y_train(y_train, sys.argv[2])
 
     logReg = LogisticRegression()
 
@@ -58,13 +59,12 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     fpr = {}
     tpr = {}
     roc_auc = {}
-    y_test_values = y_test.values
 
-    fpr[0], tpr[0], _ = roc_curve(y_test_values, y_predict)
+    fpr[0], tpr[0], _ = roc_curve(y_test, y_predict)
     roc_auc[0] = auc(fpr[0], tpr[0])
 
     # Compute micro-average ROC curve and ROC area
-    fpr["micro"], tpr["micro"], _ = roc_curve(y_test_values, y_predict)
+    fpr["micro"], tpr["micro"], _ = roc_curve(y_test, y_predict)
     roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
     plt.figure()
@@ -76,6 +76,6 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic example')
+    plt.title('Receiver operating characteristic for ' + specie)
     plt.legend(loc="lower right")
     plt.savefig('../output/rocCurves/logReg/' + specie + '.png')

@@ -13,7 +13,7 @@ from sklearn.model_selection import cross_val_score
 from pywsl.pul import pu_mr
 from pywsl.utils.comcalc import bin_clf_err
 
-from pulib.pu_data import pn_from_dataframe, pu_from_y_train
+from pulib.pu_data import pn_from_dataframe, pos_from_y_train
 
 # Ignore warnings
 import warnings
@@ -35,16 +35,16 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
 
     pu_sl = pu_mr.PU_SL()
 
-    y_train = pu_from_y_train(y_train, int(sys.argv[2]))
+    y_train = pos_from_y_train(y_train, sys.argv[2])
 
     # Train the model
-    pu_sl.fit(x_train, y_train.values)
+    pu_sl.fit(x_train, y_train)
 
     # Test the model
     y_predict = pu_sl.predict(x_test)
 
     # Binary clf error calculation
-    score = bin_clf_err(y_test, y_predict, prior=.5)
+    score = bin_clf_err(y_test, y_predict)
     print('\nbin_clf_err:\n\n', score)
 
     # Confusion Matrix calculation
@@ -55,13 +55,12 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     fpr = {}
     tpr = {}
     roc_auc = {}
-    y_test_values = y_test.values
 
-    fpr[0], tpr[0], _ = roc_curve(y_test_values, y_predict)
+    fpr[0], tpr[0], _ = roc_curve(y_test, y_predict)
     roc_auc[0] = auc(fpr[0], tpr[0])
 
     # Compute micro-average ROC curve and ROC area
-    fpr["micro"], tpr["micro"], _ = roc_curve(y_test_values, y_predict)
+    fpr["micro"], tpr["micro"], _ = roc_curve(y_test, y_predict)
     roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
     plt.figure()
@@ -73,7 +72,7 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic example')
+    plt.title('Receiver operating characteristic for ' + specie)
     plt.legend(loc="lower right")
     plt.savefig('../output/rocCurves/pu/' + specie + '.png')
 

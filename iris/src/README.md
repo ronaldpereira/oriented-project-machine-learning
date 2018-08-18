@@ -1,101 +1,98 @@
 # Machine Learning Results:
-## Multi-layer Perceptron with training size = 120:
+## Multi-layer Perceptron with training size = 75:
 
 f1-score:
 
- 0.9333333333333333
+ 0.6666666666666666
 
 Confusion Matrix:
 
- [[10  0  0]
- [ 0  8  2]
- [ 0  0 10]]
+ [[25  0  0]
+ [ 0 25  0]
+ [ 0 25  0]]
 
 Cross-validation:
 
-Accuracy: 0.85 (+/- 0.15)
+Accuracy: 0.69 (+/- 0.26)
 
 
-## Logistic Regression with training size = 120:
+## Logistic Regression with training size = 75 and positive size = 30:
 ### Iris-setosa
 
 f1-score:
 
- 0.0
+ 0.3902439024390244
 
 Confusion Matrix:
 
- [[ 0 20  0]
- [ 0  0  0]
- [ 0 10  0]]
+ [[48  2]
+ [25  0]]
 
 Cross-validation:
 
-Accuracy: 0.92 (+/- 0.00)
+Accuracy: 0.63 (+/- 0.05)
 
 
 ### Iris-versicolor
 
 f1-score:
 
- 0.0
+ 0.3902439024390244
 
 Confusion Matrix:
 
- [[ 0 20  0]
- [ 0  0  0]
- [ 0 10  0]]
+ [[48  2]
+ [25  0]]
 
 Cross-validation:
 
-Accuracy: 0.92 (+/- 0.00)
+Accuracy: 0.63 (+/- 0.09)
 
 
 ### Iris-virginica
 
 f1-score:
 
- 0.0
+ 0.4
 
 Confusion Matrix:
 
- [[ 0 20  0]
- [ 0  0  0]
- [ 0 10  0]]
+ [[50  0]
+ [25  0]]
 
 Cross-validation:
 
-Accuracy: 0.92 (+/- 0.00)
+Accuracy: 0.67 (+/- 0.00)
 
 
-## Positive-Unlabeled Classification with training size = 120 and positive size = 10:
+## Positive-Unlabeled Classification with training size = 75 and positive size = 30:
 ### Iris-setosa
 
 bin_clf_err:
 
- 0.45999999999999996
+ 0.22666666666666666
 
 Confusion Matrix:
 
- [[17  3]
- [ 8  2]]
+ [[50  0]
+ [17  8]]
 ### Iris-versicolor
 
 bin_clf_err:
 
- 0.6785714285714286
+ 0.37333333333333335
 
 Confusion Matrix:
 
- [[18  2]
- [10  0]]
+ [[47  3]
+ [25  0]]
 ### Iris-virginica
 
 bin_clf_err:
 
- 0.14285714285714285
+ 0.4
 
 Confusion Matrix:
 
- [[20  0]
- [ 8  2]]
+ [[45  5]
+ [25  0]]
