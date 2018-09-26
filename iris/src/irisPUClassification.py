@@ -12,8 +12,9 @@ from sklearn.model_selection import cross_val_score
 
 from pywsl.pul import pu_mr
 from pywsl.utils.comcalc import bin_clf_err
+from pywsl.cpe.cpe_ene import cpe
 
-from pulib.pu_data import pn_from_dataframe, pos_from_y_train
+from pulib.pu_data import pn_from_dataframe, pu_from_y_train
 
 # Ignore warnings
 import warnings
@@ -26,16 +27,18 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     print('###', specie)
 
     irisDataset = pn_from_dataframe(irisDataset, 'Species', specie)
-            
+
     # Splits x and y (features and target)
     train_size = int(sys.argv[1])
 
     x_train, x_test, y_train, y_test = train_test_split(
-        irisDataset.drop(['Id','Species', 'y'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['y'])
+        irisDataset.drop(['Id','Species', 'y'], axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['y'])
 
-    pu_sl = pu_mr.PU_SL()
+    prior = cpe(irisDataset.loc[irisDataset['y']==1].drop(['Id', 'Species', 'y'], axis=1).copy(), irisDataset['y'].astype('int'), irisDataset.loc[irisDataset['y']==-1].drop(['Id', 'Species', 'y'], axis=1).copy())
 
-    y_train = pos_from_y_train(y_train, sys.argv[2])
+    pu_sl = pu_mr.PU_SL(prior=prior, basis=sys.argv[3])
+
+    y_train = pu_from_y_train(y_train, float(sys.argv[2]))
 
     # Train the model
     pu_sl.fit(x_train, y_train)
@@ -74,5 +77,4 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylabel('True Positive Rate')
     plt.title('Receiver operating characteristic for ' + specie)
     plt.legend(loc="lower right")
-    plt.savefig('../output/rocCurves/pu/' + specie + '.png')
-
+    plt.savefig('../output/pu_'+ sys.argv[3] + '/' + specie + '.png')

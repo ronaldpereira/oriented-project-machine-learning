@@ -12,9 +12,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import cross_val_score
 
-from pulib.pu_data import pn_from_dataframe, pos_from_y_train
+from pulib.pu_data import pn_from_dataframe, pu_from_y_train
 
-# Ignore warnings
+# Ignore warnings 
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -32,7 +32,9 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     x_train, x_test, y_train, y_test = train_test_split(
         irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
 
-    y_train = pos_from_y_train(y_train, sys.argv[2])
+    
+
+    y_train = pu_from_y_train(y_train, float(sys.argv[2]))
 
     logReg = LogisticRegression()
 
@@ -78,4 +80,4 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylabel('True Positive Rate')
     plt.title('Receiver operating characteristic for ' + specie)
     plt.legend(loc="lower right")
-    plt.savefig('../output/rocCurves/logReg/' + specie + '.png')
+    plt.savefig('../output/logReg/' + specie + '.png')

@@ -16,7 +16,7 @@ xgboost:
 pu_lm:
 	@echo 'Generating PU with Linear Model results...'
 	@echo '## PU with Linear Model with training size = $(TRAIN_SIZE):' >> $(OUTPUT)
-	@python3 mnist_pu.py $(TRAIN_SIZE)  $(POSITIVE_SIZE) lm >> $(OUTPUT)
+	@python3 mnist_pu.py $(TRAIN_SIZE) $(POSITIVE_SIZE) lm >> $(OUTPUT)
 	@echo 'PU with Linear Model results generated successfully'
 
 pu_gauss:

@@ -59,8 +59,6 @@ testSet = pd.read_csv('../input/test.csv', sep=',')
 
 x_train, y_train = mountTitanicSet(trainSet, 'train')
 
-x_test = mountTitanicSet(testSet, 'test')
-
 x_train, x_val, y_train, y_val = train_test_split(x_train, y_train.astype('int'), train_size=float(sys.argv[1]))
 
 logReg = LogisticRegression()
@@ -106,4 +104,3 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver operating characteristic for Logistic Regression')
 plt.legend(loc="lower right")
 plt.savefig('../output/titanic_logreg.png')
-
