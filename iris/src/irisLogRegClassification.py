@@ -32,8 +32,6 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     x_train, x_test, y_train, y_test = train_test_split(
         irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
 
-    
-
     y_train = pu_from_y_train(y_train, float(sys.argv[2]))
 
     logReg = LogisticRegression()

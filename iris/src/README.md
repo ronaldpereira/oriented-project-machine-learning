@@ -1,22 +1,22 @@
 # Machine Learning Results:
-## Multi-layer Perceptron with training size = 75:
+## Multi-layer Perceptron with training size = 120:
 
 f1-score:
 
- 0.38666666666666666
+ 1.0
 
 Confusion Matrix:
 
- [[ 4  0 21]
- [ 0  0 25]
- [ 0  0 25]]
+ [[10  0  0]
+ [ 0 10  0]
+ [ 0  0 10]]
 
 Cross-validation:
 
-Accuracy: 0.73 (+/- 0.33)
+Accuracy: 0.59 (+/- 0.24)
 
 
-## Logistic Regression with training size = 75 and positive size = 30:
+## Logistic Regression with training size = 120 and positive size = 30:
 ### Iris-setosa
 
 f1-score:
@@ -25,12 +25,12 @@ f1-score:
 
 Confusion Matrix:
 
- [[50  0]
- [25  0]]
+ [[20  0]
+ [10  0]]
 
 Cross-validation:
 
-Accuracy: 0.67 (+/- 0.00)
+Accuracy: 0.75 (+/- 0.00)
 
 
 ### Iris-versicolor
@@ -41,29 +41,29 @@ f1-score:
 
 Confusion Matrix:
 
- [[50  0]
- [25  0]]
+ [[20  0]
+ [10  0]]
 
 Cross-validation:
 
-Accuracy: 0.67 (+/- 0.00)
+Accuracy: 0.75 (+/- 0.00)
 
 
 ### Iris-virginica
 
 f1-score:
 
- 0.4805781391147244
+ 0.4
 
 Confusion Matrix:
 
- [[50  0]
- [23  2]]
+ [[20  0]
+ [10  0]]
 
 Cross-validation:
 
-Accuracy: 0.65 (+/- 0.03)
+Accuracy: 0.75 (+/- 0.00)
 
 
-## Positive-Unlabeled Classification with training size = 75 and positive size = 30:
+## Positive-Unlabeled Classification with training size = 120 and positive size = 30:
 ### Iris-setosa
