@@ -25,7 +25,7 @@ irisDataset.loc[irisDataset['Species'] == 'Iris-virginica', 'y'] = 2
 train_size = int(sys.argv[1])
 # Splits x and y (features and target)
 x_train, x_test, y_train, y_test = train_test_split(
-    irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
+    irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'], random_state=1212)
 
 '''
 Multilayer perceptron model, with one hidden layer.

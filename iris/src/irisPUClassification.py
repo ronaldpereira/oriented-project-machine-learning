@@ -13,7 +13,9 @@ from pywsl.pul import pu_mr
 from pywsl.utils.comcalc import bin_clf_err
 from pywsl.cpe.cpe_ene import cpe
 
-from pulib.pu_data import pn_from_dataframe, pu_from_y_train
+from pywsl.utils.syndata import gen_twonorm_ssl
+
+from pulib.pu_data import pnu_from_dataframe, pn_from_dataframe
 
 # Ignore warnings
 import warnings
@@ -25,29 +27,37 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
 
     print('###', specie)
 
+    # Splits x and y (features and target)
+    train_size = float(sys.argv[1]) if float(sys.argv[1]) != int(sys.argv[1]) else int(sys.argv[1])
+
     irisDataset = pn_from_dataframe(irisDataset, 'Species', specie)
 
-    # Splits x and y (features and target)
-    train_size = int(sys.argv[1])
+    _, x_test, _, y_test = train_test_split(
+        irisDataset.drop(['Id','Species', 'y'], axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'], random_state=1212)
 
-    x_train, x_test, y_train, y_test = train_test_split(
-        irisDataset.drop(['Id','Species', 'y'], axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['y'])
+    # Loads the iris csv dataset
+    irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
-    y_train = pu_from_y_train(y_train, float(sys.argv[2]))
+    irisDataset = pnu_from_dataframe(irisDataset, 'Species', specie, float(sys.argv[2]))
+
+    x_train, _, y_train, _ = train_test_split(
+        irisDataset.drop(['Id','Species', 'y'], axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'], random_state=1212)
 
     x_l = irisDataset.copy().loc[irisDataset['y']!=0].drop(['Id', 'Species', 'y'], axis=1).as_matrix()
-    y_l = irisDataset['y'].copy().loc[irisDataset['y']!=0].as_matrix()
+    y_l = irisDataset.copy().loc[irisDataset['y']!=0]['y'].as_matrix()
     x_u = irisDataset.copy().loc[irisDataset['y']==0].drop(['Id', 'Species', 'y'], axis=1).as_matrix()
 
-    print(x_l)
-    print(y_l)
-    print(x_u)
-
     prior = cpe(x_l, y_l, x_u)
-    print('prior:', prior)
 
-    pu_sl = pu_mr.PU_SL(prior=prior, basis=sys.argv[3])
-    print(x_train.values)
+    # Using CPE to estimate prior
+    # pu_sl = pu_mr.PU_SL(prior=prior, basis=sys.argv[3])
+
+    # Using default prior (0.5)
+    # pu_sl = pu_mr.PU_SL(basis=sys.argv[3])
+
+    # Using real prior (0.3333)
+    pu_sl = pu_mr.PU_SL(prior=0.3333, basis=sys.argv[3])
+
     # Train the model
     pu_sl.fit(x_train, y_train)
 
@@ -83,6 +93,6 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic for ' + specie)
+    plt.title('Receiver operating characteristic for ' + specie + 'using positive size = ' + sys.argv[2])
     plt.legend(loc="lower right")
-    plt.savefig('../output/pu_'+ sys.argv[3] + '/' + specie + '.png')
+    plt.savefig('../output/pu_'+ sys.argv[3] + '/' + sys.argv[2] + '/' + specie + '.png')

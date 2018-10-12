@@ -11,7 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
 from sklearn.model_selection import cross_val_score
 
-from pulib.pu_data import pn_from_dataframe, pu_from_y_train
+from pulib.pu_data import pnu_from_dataframe
 
 # Ignore warnings 
 import warnings
@@ -22,16 +22,16 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     irisDataset = pd.read_csv('../input/iris_dataset.csv')
 
     print('###', specie)
-    irisDataset = pn_from_dataframe(irisDataset, 'Species', specie)
-    irisDataset['y'].loc[irisDataset['y'] == -1] = 0
+    irisDataset = pnu_from_dataframe(irisDataset, 'Species', specie, float(sys.argv[2]))
+
+    # Considering all unlabeled instances as negatives
+    irisDataset['y'].loc[irisDataset['y'] == 0] = -1
 
     # Splits x and y (features and target)
     train_size = int(sys.argv[1])
 
     x_train, x_test, y_train, y_test = train_test_split(
-        irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'])
-
-    y_train = pu_from_y_train(y_train, float(sys.argv[2]))
+        irisDataset.drop(['Id','y','Species'],axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['Species'], random_state=1212)
 
     logReg = LogisticRegression()
 
@@ -75,6 +75,6 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     plt.ylim([0.0, 1.05])
     plt.xlabel('False Positive Rate')
     plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic for ' + specie)
+    plt.title('Receiver operating characteristic for ' + specie + 'using positive size = ' + sys.argv[2])
     plt.legend(loc="lower right")
-    plt.savefig('../output/logReg/' + specie + '.png')
+    plt.savefig('../output/logReg/' + sys.argv[2] + '/' + specie + '.png')
