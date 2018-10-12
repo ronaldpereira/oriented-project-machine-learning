@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -34,12 +33,21 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     x_train, x_test, y_train, y_test = train_test_split(
         irisDataset.drop(['Id','Species', 'y'], axis=1), irisDataset['y'].astype('int'), train_size=train_size, stratify=irisDataset['y'])
 
-    prior = cpe(irisDataset.loc[irisDataset['y']==1].drop(['Id', 'Species', 'y'], axis=1).copy(), irisDataset['y'].astype('int'), irisDataset.loc[irisDataset['y']==-1].drop(['Id', 'Species', 'y'], axis=1).copy())
-
-    pu_sl = pu_mr.PU_SL(prior=prior, basis=sys.argv[3])
-
     y_train = pu_from_y_train(y_train, float(sys.argv[2]))
 
+    x_l = irisDataset.copy().loc[irisDataset['y']!=0].drop(['Id', 'Species', 'y'], axis=1).as_matrix()
+    y_l = irisDataset['y'].copy().loc[irisDataset['y']!=0].as_matrix()
+    x_u = irisDataset.copy().loc[irisDataset['y']==0].drop(['Id', 'Species', 'y'], axis=1).as_matrix()
+
+    print(x_l)
+    print(y_l)
+    print(x_u)
+
+    prior = cpe(x_l, y_l, x_u)
+    print('prior:', prior)
+
+    pu_sl = pu_mr.PU_SL(prior=prior, basis=sys.argv[3])
+    print(x_train.values)
     # Train the model
     pu_sl.fit(x_train, y_train)
 
