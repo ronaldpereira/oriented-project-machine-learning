@@ -1,19 +1,14 @@
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-import random
 import sys
 
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import f1_score, confusion_matrix, roc_curve, auc
-from sklearn.model_selection import cross_val_score
 
 from pywsl.pul import pu_mr
 from pywsl.utils.comcalc import bin_clf_err
 from pywsl.cpe.cpe_ene import cpe
-
-from pywsl.utils.syndata import gen_twonorm_ssl
 
 from pulib.pu_data import pnu_from_dataframe, pn_from_dataframe
 
