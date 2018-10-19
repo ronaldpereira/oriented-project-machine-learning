@@ -29,7 +29,7 @@ for index in range(n_clusters):
     plt.scatter(clustersx[index], clustersy[index], label='cluster %d' %index)
 
 plt.legend(loc='best')
-plt.savefig('output/'+str(n_clusters)+'clusters.png')
+plt.savefig('../output/'+str(n_clusters)+'clusters.png')
 
 xclusters = []
 yclusters = []
