@@ -30,6 +30,15 @@ for index in range(n_clusters):
 
 plt.legend(loc='best')
 plt.savefig('../output/'+str(n_clusters)+'clusters.png')
+plt.clf()
+
+for index in range(n_clusters):
+    plt.hexbin(clustersx[index], clustersy[index], gridsize=25, cmap='inferno')
+    plt.title('Cluster ' + str(index) + ' density plot')
+    cb = plt.colorbar()
+    cb.set_label('counts')
+    plt.savefig('../output/'+str(n_clusters)+'clusters_cluster'+str(index)+'.png')
+    plt.clf()
 
 xclusters = []
 yclusters = []
@@ -41,7 +50,7 @@ for index in range(n_clusters):
 
 df = pd.DataFrame({'x_value':xclusters, 'y_value':yclusters, 'label':labelclusters})
 
-df = pnu_from_dataframe(df, 'label', 0, pos_size=0.8, neg_size=0.8)
+df = pnu_from_dataframe(df, 'label', 0, pos_size=0.8, neg_size=0)
 
 x_l = df.loc[df['y'] != 0][['x_value', 'y_value']].values
 y_l = df.loc[df['y'] != 0]['y'].values
