@@ -5,15 +5,4 @@ mu axis x = mu axis y = sigma axis x = sigma axis y = size = Enter cluster 3 con
 mu axis x = mu axis y = sigma axis x = sigma axis y = size = 
 
 [{'xmu': 3.0, 'ymu': 3.0, 'xsigma': 0.2, 'ysigma': 0.4, 'size': 10000}, {'xmu': 3.5, 'ymu': 3.5, 'xsigma': 0.2, 'ysigma': 0.5, 'size': 10000}, {'xmu': 5.5, 'ymu': 6.5, 'xsigma': 0.2, 'ysigma': 0.4, 'size': 10000}, {'xmu': 3.7, 'ymu': 3.8, 'xsigma': 0.9, 'ysigma': 0.2, 'size': 10000}]
-
-
-Traceback (most recent call last):
-  File "cpeTest.py", line 50, in <module>
-    prior = cpe(x_l, y_l, x_u)
-  File "/home/ronald/anaconda3/envs/poc/lib/python3.7/site-packages/pywsl/cpe/cpe_ene.py", line 22, in cpe
-    A[i, j] = -np.mean(alpha_dist(x[i], x[j], alpha))
-  File "/home/ronald/anaconda3/envs/poc/lib/python3.7/site-packages/pywsl/cpe/cpe_ene.py", line 49, in alpha_dist
-    return np.sqrt(np.maximum(dist, 0))
-MemoryError
-Makefile:14: recipe for target 'test4' failed
-make: *** [test4] Error 1
+cpe prior =  0.2540504440034952

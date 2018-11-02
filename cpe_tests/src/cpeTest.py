@@ -50,7 +50,7 @@ for index in range(n_clusters):
 
 df = pd.DataFrame({'x_value':xclusters, 'y_value':yclusters, 'label':labelclusters})
 
-df = pnu_from_dataframe(df, 'label', 0, pos_size=0.8, neg_size=0)
+df = pnu_from_dataframe(df, 'label', 0, pos_size=0.8, neg_size=0.8)
 
 x_l = df.loc[df['y'] != 0][['x_value', 'y_value']].values
 y_l = df.loc[df['y'] != 0]['y'].values

@@ -4,4 +4,3 @@ mu axis x = mu axis y = sigma axis x = sigma axis y = size = Enter cluster 2 con
 mu axis x = mu axis y = sigma axis x = sigma axis y = size = 
 
 [{'xmu': 3.0, 'ymu': 3.0, 'xsigma': 0.2, 'ysigma': 0.4, 'size': 10000}, {'xmu': 3.5, 'ymu': 3.5, 'xsigma': 0.2, 'ysigma': 0.5, 'size': 10000}, {'xmu': 5.5, 'ymu': 6.5, 'xsigma': 0.2, 'ysigma': 0.4, 'size': 10000}]
-cpe prior =  0.33786449042114197
