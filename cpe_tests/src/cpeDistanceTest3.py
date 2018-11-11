@@ -89,8 +89,9 @@ for actualxymu in xymus:
     eucDists.append(round(eucDist, 2))
 
 print()
-print(eucDists)
-print(errorsList)
+
+for dist, error in zip(eucDists, errorsList):
+    print('error for euclidean distance %.3f : %f' %(dist, error), end='\n\n')
 
 plt.plot(eucDists, errorsList, 'b-', label='error = real-prior')
 plt.title('Errors for each euclidean distances between 2 clusters')
