@@ -1,4 +1,8 @@
-run: test2 test3 test4 distTest2 distTest3
+run: tests distTests
+
+tests: test2 test3 test4
+
+distTests: distTest2 distTest3
 
 test2:
 	@echo 'Executing test2...'
