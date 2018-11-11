@@ -14,3 +14,8 @@ test4:
 	@echo 'Executing test4...'
 	python3 cpeTest.py < ../input/input4.txt > ../output/output4.txt
 	@echo 'Finished test4'
+
+distTest2:
+	@echo 'Executing distTest2...'
+	python3 cpeDistanceTest2.py > ../output/dist2Output.txt
+	@echo 'Finished distTest2'

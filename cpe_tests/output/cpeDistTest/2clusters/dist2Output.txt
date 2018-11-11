@@ -1,0 +1,126 @@
+
+cpe prior for 0 with euclidean distance 10.000 = 0.49973095
+cpe prior for 1 with euclidean distance 10.000 = 0.49946491
+
+cpe prior for 0 with euclidean distance 9.750 = 0.49946100
+cpe prior for 1 with euclidean distance 9.750 = 0.49970410
+
+cpe prior for 0 with euclidean distance 9.500 = 0.49915919
+cpe prior for 1 with euclidean distance 9.500 = 0.49982271
+
+cpe prior for 0 with euclidean distance 9.250 = 0.49873026
+cpe prior for 1 with euclidean distance 9.250 = 0.50081333
+
+cpe prior for 0 with euclidean distance 9.000 = 0.50013432
+cpe prior for 1 with euclidean distance 9.000 = 0.49940066
+
+cpe prior for 0 with euclidean distance 8.750 = 0.50046249
+cpe prior for 1 with euclidean distance 8.750 = 0.50032787
+
+cpe prior for 0 with euclidean distance 8.500 = 0.49942391
+cpe prior for 1 with euclidean distance 8.500 = 0.49988047
+
+cpe prior for 0 with euclidean distance 8.250 = 0.50063014
+cpe prior for 1 with euclidean distance 8.250 = 0.50126722
+
+cpe prior for 0 with euclidean distance 8.000 = 0.50008325
+cpe prior for 1 with euclidean distance 8.000 = 0.49971853
+
+cpe prior for 0 with euclidean distance 7.750 = 0.50054428
+cpe prior for 1 with euclidean distance 7.750 = 0.50086501
+
+cpe prior for 0 with euclidean distance 7.500 = 0.50140840
+cpe prior for 1 with euclidean distance 7.500 = 0.50111576
+
+cpe prior for 0 with euclidean distance 7.250 = 0.50050716
+cpe prior for 1 with euclidean distance 7.250 = 0.49996691
+
+cpe prior for 0 with euclidean distance 7.000 = 0.49947288
+cpe prior for 1 with euclidean distance 7.000 = 0.50003607
+
+cpe prior for 0 with euclidean distance 6.750 = 0.49992046
+cpe prior for 1 with euclidean distance 6.750 = 0.50101183
+
+cpe prior for 0 with euclidean distance 6.500 = 0.49710070
+cpe prior for 1 with euclidean distance 6.500 = 0.50004339
+
+cpe prior for 0 with euclidean distance 6.250 = 0.49735805
+cpe prior for 1 with euclidean distance 6.250 = 0.49867712
+
+cpe prior for 0 with euclidean distance 6.000 = 0.49909265
+cpe prior for 1 with euclidean distance 6.000 = 0.50206076
+
+cpe prior for 0 with euclidean distance 5.750 = 0.50278136
+cpe prior for 1 with euclidean distance 5.750 = 0.49942733
+
+cpe prior for 0 with euclidean distance 5.500 = 0.49899209
+cpe prior for 1 with euclidean distance 5.500 = 0.49992891
+
+cpe prior for 0 with euclidean distance 5.250 = 0.50197571
+cpe prior for 1 with euclidean distance 5.250 = 0.49579396
+
+cpe prior for 0 with euclidean distance 5.000 = 0.50036741
+cpe prior for 1 with euclidean distance 5.000 = 0.49897632
+
+cpe prior for 0 with euclidean distance 4.750 = 0.49794605
+cpe prior for 1 with euclidean distance 4.750 = 0.50099049
+
+cpe prior for 0 with euclidean distance 4.500 = 0.50034659
+cpe prior for 1 with euclidean distance 4.500 = 0.50112138
+
+cpe prior for 0 with euclidean distance 4.250 = 0.49889536
+cpe prior for 1 with euclidean distance 4.250 = 0.49938306
+
+cpe prior for 0 with euclidean distance 4.000 = 0.50150307
+cpe prior for 1 with euclidean distance 4.000 = 0.50015110
+
+cpe prior for 0 with euclidean distance 3.750 = 0.49934103
+cpe prior for 1 with euclidean distance 3.750 = 0.49736265
+
+cpe prior for 0 with euclidean distance 3.500 = 0.50018943
+cpe prior for 1 with euclidean distance 3.500 = 0.49880256
+
+cpe prior for 0 with euclidean distance 3.250 = 0.49929085
+cpe prior for 1 with euclidean distance 3.250 = 0.49949782
+
+cpe prior for 0 with euclidean distance 3.000 = 0.50124354
+cpe prior for 1 with euclidean distance 3.000 = 0.49968474
+
+cpe prior for 0 with euclidean distance 2.750 = 0.49998815
+cpe prior for 1 with euclidean distance 2.750 = 0.50081589
+
+cpe prior for 0 with euclidean distance 2.500 = 0.50174359
+cpe prior for 1 with euclidean distance 2.500 = 0.50159878
+
+cpe prior for 0 with euclidean distance 2.250 = 0.49730325
+cpe prior for 1 with euclidean distance 2.250 = 0.49744199
+
+cpe prior for 0 with euclidean distance 2.000 = 0.49859031
+cpe prior for 1 with euclidean distance 2.000 = 0.50101928
+
+cpe prior for 0 with euclidean distance 1.750 = 0.50383894
+cpe prior for 1 with euclidean distance 1.750 = 0.50085383
+
+cpe prior for 0 with euclidean distance 1.500 = 0.50069312
+cpe prior for 1 with euclidean distance 1.500 = 0.49506780
+
+cpe prior for 0 with euclidean distance 1.250 = 0.48602732
+cpe prior for 1 with euclidean distance 1.250 = 0.51001298
+
+cpe prior for 0 with euclidean distance 1.000 = 0.50306078
+cpe prior for 1 with euclidean distance 1.000 = 0.48827832
+
+cpe prior for 0 with euclidean distance 0.750 = 0.49968976
+cpe prior for 1 with euclidean distance 0.750 = 0.49203411
+
+cpe prior for 0 with euclidean distance 0.500 = 0.50717254
+cpe prior for 1 with euclidean distance 0.500 = 0.46956900
+
+cpe prior for 0 with euclidean distance 0.250 = 0.54398733
+cpe prior for 1 with euclidean distance 0.250 = 0.50271872
+
+cpe prior for 0 with euclidean distance 0.000 = 0.38740584
+cpe prior for 1 with euclidean distance 0.000 = 1.00000000
+
+[10.0, 9.75, 9.5, 9.25, 9.0, 8.75, 8.5, 8.25, 8.0, 7.75, 7.5, 7.25, 7.0, 6.75, 6.5, 6.25, 6.0, 5.75, 5.5, 5.25, 5.0, 4.75, 4.5, 4.25, 4.0, 3.75, 3.5, 3.25, 3.0, 2.75, 2.5, 2.25, 2.0, 1.75, 1.5, 1.25, 1.0, 0.75, 0.5, 0.25, 0.0]
+[0.00040206992751268267, 0.00041745085078531696, 0.000509053384014968, 0.00022820361431197256, 0.00023250948721592613, 0.00039518186478537665, 0.0003478112041351844, 0.0009486830009191038, 9.911006922780352e-05, 0.0007046481416328465, 0.0012620770583410268, 0.00023703653836970595, 0.00024552449345405236, 0.00046614357822638564, 0.0014279580853945317, 0.0019824174301971698, 0.0005767021042704101, 0.0011043453788025515, 0.0005394983783334473, 0.0011151676290004353, 0.00032813513619628365, 0.0005317293137673262, 0.0007339824782202076, 0.0008607881976711029, 0.0008270879391381047, 0.0016481595159863471, 0.0005040007354584763, 0.0006056653517755861, 0.00046414040446618454, 0.00040202079044293626, 0.001671184587913821, 0.0026273800787198764, 0.00019520866754924038, 0.0023463811710486837, 0.0021195372541688573, 0.001979848997336886, 0.004330446101934893, 0.004138065613316533, 0.011629230146632641, 0.023353023452723498, 0.19370292240086628]

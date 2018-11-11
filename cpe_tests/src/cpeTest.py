@@ -1,9 +1,9 @@
 import matplotlib.pyplot as plt
 import pandas as pd
+from pulib.pu_data import pnu_from_dataframe
+from pywsl.cpe.cpe_ene import cpe
 
 import libs.normalDist as normalDist
-from pywsl.cpe.cpe_ene import cpe
-from pulib.pu_data import pnu_from_dataframe
 
 n_clusters = int(input('Enter the number of clusters to create: '))
 
