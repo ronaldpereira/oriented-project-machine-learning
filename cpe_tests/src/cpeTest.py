@@ -48,14 +48,22 @@ for index in range(n_clusters):
     yclusters.extend(clustersy[index])
     labelclusters.extend([index for _ in range(clusters_config[index]['size'])])
 
-df = pd.DataFrame({'x_value':xclusters, 'y_value':yclusters, 'label':labelclusters})
+plt.hexbin(xclusters, yclusters, gridsize=25, cmap='inferno')
+plt.title('All clusters density plot')
+cb = plt.colorbar()
+cb.set_label('counts')
+plt.savefig('../output/' + str(n_clusters) + 'clusters_all_clusters.png')
+plt.clf()
 
-df = pnu_from_dataframe(df, 'label', 0, pos_size=0.8, neg_size=0.8)
+for index in range(n_clusters):
+    df = pd.DataFrame({'x_value':xclusters, 'y_value':yclusters, 'label':labelclusters})
 
-x_l = df.loc[df['y'] != 0][['x_value', 'y_value']].values
-y_l = df.loc[df['y'] != 0]['y'].values
-x_u = df.loc[df['y'] == 0][['x_value', 'y_value']].values
+    df = pnu_from_dataframe(df, 'label', index, pos_size=0.8, neg_size=0.8)
 
-prior = cpe(x_l, y_l, x_u)
+    x_l = df.loc[df['y'] != 0][['x_value', 'y_value']].values
+    y_l = df.loc[df['y'] != 0]['y'].values
+    x_u = df.loc[df['y'] == 0][['x_value', 'y_value']].values
 
-print('cpe prior = ', prior)
+    prior = cpe(x_l, y_l, x_u)
+
+    print('cpe prior for %d = %.8f' %(index, prior))
