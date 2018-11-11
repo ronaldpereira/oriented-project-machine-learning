@@ -17,7 +17,7 @@ for index in range(n_clusters):
     if index == 0:
         clusters_config[index]['xmu'] = 0.0
         clusters_config[index]['ymu'] = 2.0
-    if index == 1:
+    elif index == 1:
         clusters_config[index]['xmu'] = 10.0
         clusters_config[index]['ymu'] = 2.0
 
