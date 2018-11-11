@@ -1,3 +1,5 @@
+import math
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -16,26 +18,26 @@ clustersy = [[] for _ in range(n_clusters)]
 for index in range(n_clusters):
     if index == 0:
         clusters_config[index]['xmu'] = 0.0
-        clusters_config[index]['ymu'] = 2.0
-    if index == 1:
+        clusters_config[index]['ymu'] = 0.0
+    elif index == 1:
         clusters_config[index]['xmu'] = 10.0
-        clusters_config[index]['ymu'] = 2.0
+        clusters_config[index]['ymu'] = 0.0
+    elif index == 2:
+        clusters_config[index]['xmu'] = 0.0
+        clusters_config[index]['ymu'] = 10.0
 
-    if index == 2:
-        clusters_config[index]['xmu'] = 10.0
-        clusters_config[index]['ymu'] = 2.0
-
-    clusters_config[index]['xsigma'] = 0.2
-    clusters_config[index]['ysigma'] = 0.2
+    clusters_config[index]['xsigma'] = 1.0
+    clusters_config[index]['ysigma'] = 1.0
     clusters_config[index]['size'] = 1000
 
 errorsList = []
 eucDists = []
 
-xmus = [x/4 for x in reversed(range(41))]
+xymus = [x/4 for x in reversed(range(41))]
 
-for actualxmu in xmus:
-    clusters_config[index]['xmu'] = actualxmu
+for actualxymu in xymus:
+    clusters_config[1]['xmu'] = actualxymu
+    clusters_config[2]['ymu'] = actualxymu
 
     eucDist = euclidean([clusters_config[0]['xmu'], clusters_config[0]['ymu']], [clusters_config[1]['xmu'], clusters_config[1]['ymu']])
 
@@ -82,7 +84,7 @@ for actualxmu in xmus:
 
         print('cpe prior for %d with euclidean distance %.3f = %.8f' %(index, eucDist, prior))
 
-    errorsList.append(abs(0.5 - np.mean(priors)))
+    errorsList.append(abs((1/3) - np.mean(priors)))
     eucDists.append(round(eucDist, 2))
 
 print()

@@ -16,13 +16,14 @@ clustersy = [[] for _ in range(n_clusters)]
 for index in range(n_clusters):
     if index == 0:
         clusters_config[index]['xmu'] = 0.0
-        clusters_config[index]['ymu'] = 2.0
+        clusters_config[index]['ymu'] = 0.0
     elif index == 1:
         clusters_config[index]['xmu'] = 10.0
-        clusters_config[index]['ymu'] = 2.0
+        clusters_config[index]['ymu'] = 0.0
 
-    clusters_config[index]['xsigma'] = 0.2
-    clusters_config[index]['ysigma'] = 0.2
+    # Increasing the sigmas will cause a completely different behaviour in CPE
+    clusters_config[index]['xsigma'] = 0.1
+    clusters_config[index]['ysigma'] = 0.1
     clusters_config[index]['size'] = 1000
 
 errorsList = []

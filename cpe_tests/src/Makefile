@@ -1,4 +1,4 @@
-run: test2 test3 test4
+run: test2 test3 test4 distTest2 distTest3
 
 test2:
 	@echo 'Executing test2...'
@@ -19,3 +19,8 @@ distTest2:
 	@echo 'Executing distTest2...'
 	python3 cpeDistanceTest2.py > ../output/dist2Output.txt
 	@echo 'Finished distTest2'
+
+distTest3:
+	@echo 'Executing distTest3...'
+	python3 cpeDistanceTest3.py > ../output/dist3Output.txt
+	@echo 'Finished distTest3'
