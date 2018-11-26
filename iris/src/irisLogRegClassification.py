@@ -17,6 +17,7 @@ from pulib.pu_data import pnu_from_dataframe
 import warnings
 warnings.filterwarnings('ignore')
 
+plotData = []
 for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     # Loads the iris csv dataset
     irisDataset = pd.read_csv('../input/iris_dataset.csv')
@@ -67,14 +68,31 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
     plt.figure()
-    lw = 2
-    plt.plot(fpr[0], tpr[0], color='darkorange',
-            lw=lw, label='ROC curve (area = %0.2f)' % roc_auc[0])
-    plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
-    plt.xlim([0.0, 1.0])
-    plt.ylim([0.0, 1.05])
-    plt.xlabel('False Positive Rate')
-    plt.ylabel('True Positive Rate')
-    plt.title('Receiver operating characteristic for ' + specie + 'using positive size = ' + sys.argv[2])
-    plt.legend(loc="lower right")
-    plt.savefig('../output/logReg/' + sys.argv[2] + '/' + specie + '.png')
+# plt.figure()
+    # lw = 2
+    # plt.plot(fpr[0], tpr[0], color='darkorange',
+    #         lw=lw, label='ROC curve (area = %0.2f)' % roc_auc[0])
+    # plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+    # plt.xlim([0.0, 1.0])
+    # plt.ylim([0.0, 1.05])
+    # plt.xlabel('False Positive Rate')
+    # plt.ylabel('True Positive Rate')
+    # plt.title('Receiver operating characteristic for ' + specie + 'using positive size = ' + sys.argv[2])
+    # plt.legend(loc="lower right")
+    # plt.savefig('../output/logReg/' + sys.argv[2] + '/' + specie + '.png')
+    
+    plotData.append((specie, fpr[0], tpr[0], roc_auc[0]))
+
+lw = 2
+
+for specie, fpr, tpr, roc_auc in plotData:
+    plt.plot(fpr, tpr, lw=lw, label='%s (AUC = %.2f)'%(specie, roc_auc))
+
+plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic using Logistic Regression model')
+plt.legend(loc="lower right")
+plt.savefig('../output/logReg/graphics/logregroc.png')
