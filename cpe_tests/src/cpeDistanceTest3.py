@@ -26,11 +26,11 @@ for repetition in range(totalRepetitions):
             clusters_config[index]['xmu'] = 0.0
             clusters_config[index]['ymu'] = 0.0
         elif index == 1:
-            clusters_config[index]['xmu'] = 10.0
+            clusters_config[index]['xmu'] = 5.0
             clusters_config[index]['ymu'] = 0.0
         elif index == 2:
             clusters_config[index]['xmu'] = 0.0
-            clusters_config[index]['ymu'] = 10.0
+            clusters_config[index]['ymu'] = 5.0
 
         # Increasing the sigmas will cause a completely different behaviour in CPE
         clusters_config[index]['xsigma'] = 1.0
@@ -40,7 +40,7 @@ for repetition in range(totalRepetitions):
     errorsList = []
     eucDists = []
 
-    xymus = [x/4 for x in reversed(range(41))]
+    xymus = [x/4 for x in reversed(range(21))]
 
     for actualxymu in xymus:
         clusters_config[1]['xmu'] = actualxymu
@@ -112,7 +112,7 @@ for repetition in range(totalRepetitions):
 repErrorsMean = np.mean(repErrors, axis=0)
 repErrorsStd = np.std(repErrors, axis=0)
 
-plt.figure(figsize=(9, 6))
+plt.figure(figsize=(18, 6))
 
 plt.plot(eucDists, repErrorsMean, 'b-o', label='CPE mean error')
 
