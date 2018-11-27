@@ -17,4 +17,4 @@ chart = ggplot( tsne, aes(x='X t-SNE', y='Y t-SNE', color='Species', label='Spec
         + geom_point(size=70) \
         + ggtitle("t-SNE plot colored by specie")
 
-chart.save('../output/tsne/tsneIris.png', width=12, height=9)
+chart.save('../output/tsne/tsneIris.pdf', width=12, height=8)

@@ -112,7 +112,7 @@ for repetition in range(totalRepetitions):
 repErrorsMean = np.mean(repErrors, axis=0)
 repErrorsStd = np.std(repErrors, axis=0)
 
-plt.figure(figsize=(30, 10))
+plt.figure(figsize=(9, 6))
 
 plt.plot(eucDists, repErrorsMean, 'b-o', label='CPE mean error')
 
@@ -120,9 +120,9 @@ plt.plot(eucDists, repErrorsMean, 'b-o', label='CPE mean error')
 for cap in caps:
     cap.set_markeredgewidth(1)
 
-plt.title('Mean errors for each euclidean distances between %d clusters with %d repetitions' %(n_clusters, totalRepetitions))
+plt.title('CPE errors for %d clusters with %d repetitions' %(n_clusters, totalRepetitions))
 plt.xlabel('Euclidean Distance')
 plt.ylabel('Mean Error')
 plt.legend(loc='best')
-plt.savefig('../output/cpeDistTest/%dClusters%dRepetitions.png' %(n_clusters, totalRepetitions))
+plt.savefig('../output/cpeDistTest/%dClusters%dRepetitions.pdf' %(n_clusters, totalRepetitions))
 plt.clf()
