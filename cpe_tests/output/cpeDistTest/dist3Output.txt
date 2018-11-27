@@ -3282,3 +3282,664 @@ cpe prior for 2 with euclidean distance 6.750 = 0.34316376
 
 cpe prior for 0 with euclidean distance 6.500 = 0.32392530
 cpe prior for 1 with euclidean distance 6.500 = 0.33964288
+cpe prior for 2 with euclidean distance 6.500 = 0.34012988
+
+cpe prior for 0 with euclidean distance 6.250 = 0.32845514
+cpe prior for 1 with euclidean distance 6.250 = 0.33946600
+cpe prior for 2 with euclidean distance 6.250 = 0.32851960
+
+cpe prior for 0 with euclidean distance 6.000 = 0.32620459
+cpe prior for 1 with euclidean distance 6.000 = 0.33644822
+cpe prior for 2 with euclidean distance 6.000 = 0.31368745
+
+cpe prior for 0 with euclidean distance 5.750 = 0.31946228
+cpe prior for 1 with euclidean distance 5.750 = 0.31773906
+cpe prior for 2 with euclidean distance 5.750 = 0.32151304
+
+cpe prior for 0 with euclidean distance 5.500 = 0.32503690
+cpe prior for 1 with euclidean distance 5.500 = 0.34237530
+cpe prior for 2 with euclidean distance 5.500 = 0.33467398
+
+cpe prior for 0 with euclidean distance 5.250 = 0.33659867
+cpe prior for 1 with euclidean distance 5.250 = 0.33415320
+cpe prior for 2 with euclidean distance 5.250 = 0.32552109
+
+cpe prior for 0 with euclidean distance 5.000 = 0.34850126
+cpe prior for 1 with euclidean distance 5.000 = 0.33024938
+cpe prior for 2 with euclidean distance 5.000 = 0.33891031
+
+cpe prior for 0 with euclidean distance 4.750 = 0.34939542
+cpe prior for 1 with euclidean distance 4.750 = 0.32812083
+cpe prior for 2 with euclidean distance 4.750 = 0.33052858
+
+cpe prior for 0 with euclidean distance 4.500 = 0.33591656
+cpe prior for 1 with euclidean distance 4.500 = 0.31876677
+cpe prior for 2 with euclidean distance 4.500 = 0.33066928
+
+cpe prior for 0 with euclidean distance 4.250 = 0.35216676
+cpe prior for 1 with euclidean distance 4.250 = 0.34429970
+cpe prior for 2 with euclidean distance 4.250 = 0.32341095
+
+cpe prior for 0 with euclidean distance 4.000 = 0.33894805
+cpe prior for 1 with euclidean distance 4.000 = 0.34317065
+cpe prior for 2 with euclidean distance 4.000 = 0.32188307
+
+cpe prior for 0 with euclidean distance 3.750 = 0.33696088
+cpe prior for 1 with euclidean distance 3.750 = 0.33972602
+cpe prior for 2 with euclidean distance 3.750 = 0.34600444
+
+cpe prior for 0 with euclidean distance 3.500 = 0.34611286
+cpe prior for 1 with euclidean distance 3.500 = 0.33697492
+cpe prior for 2 with euclidean distance 3.500 = 0.34007418
+
+cpe prior for 0 with euclidean distance 3.250 = 0.35580469
+cpe prior for 1 with euclidean distance 3.250 = 0.33325337
+cpe prior for 2 with euclidean distance 3.250 = 0.33007667
+
+cpe prior for 0 with euclidean distance 3.000 = 0.33466379
+cpe prior for 1 with euclidean distance 3.000 = 0.36139356
+cpe prior for 2 with euclidean distance 3.000 = 0.33745514
+
+cpe prior for 0 with euclidean distance 2.750 = 0.34001688
+cpe prior for 1 with euclidean distance 2.750 = 0.32867393
+cpe prior for 2 with euclidean distance 2.750 = 0.32856943
+
+cpe prior for 0 with euclidean distance 2.500 = 0.34297909
+cpe prior for 1 with euclidean distance 2.500 = 0.34207729
+cpe prior for 2 with euclidean distance 2.500 = 0.32158127
+
+cpe prior for 0 with euclidean distance 2.250 = 0.32685970
+cpe prior for 1 with euclidean distance 2.250 = 0.32603222
+cpe prior for 2 with euclidean distance 2.250 = 0.33290809
+
+cpe prior for 0 with euclidean distance 2.000 = 0.29271494
+cpe prior for 1 with euclidean distance 2.000 = 0.32355307
+cpe prior for 2 with euclidean distance 2.000 = 0.32382046
+
+cpe prior for 0 with euclidean distance 1.750 = 0.34607677
+cpe prior for 1 with euclidean distance 1.750 = 0.32565504
+cpe prior for 2 with euclidean distance 1.750 = 0.33441011
+
+cpe prior for 0 with euclidean distance 1.500 = 0.29870563
+cpe prior for 1 with euclidean distance 1.500 = 0.29504036
+cpe prior for 2 with euclidean distance 1.500 = 0.37613627
+
+cpe prior for 0 with euclidean distance 1.250 = 0.42949024
+cpe prior for 1 with euclidean distance 1.250 = 0.31998364
+cpe prior for 2 with euclidean distance 1.250 = 0.30181204
+
+cpe prior for 0 with euclidean distance 1.000 = 0.29038277
+cpe prior for 1 with euclidean distance 1.000 = 0.35098886
+cpe prior for 2 with euclidean distance 1.000 = 0.32758213
+
+cpe prior for 0 with euclidean distance 0.750 = 0.39989723
+cpe prior for 1 with euclidean distance 0.750 = 0.38833968
+cpe prior for 2 with euclidean distance 0.750 = 0.35676787
+
+cpe prior for 0 with euclidean distance 0.500 = 0.31361209
+cpe prior for 1 with euclidean distance 0.500 = 0.28951539
+cpe prior for 2 with euclidean distance 0.500 = 0.29056169
+
+cpe prior for 0 with euclidean distance 0.250 = 0.57292261
+cpe prior for 1 with euclidean distance 0.250 = 0.18330998
+cpe prior for 2 with euclidean distance 0.250 = 0.12292250
+
+cpe prior for 0 with euclidean distance 0.000 = 0.50597451
+cpe prior for 1 with euclidean distance 0.000 = 0.61214108
+cpe prior for 2 with euclidean distance 0.000 = 0.00000000
+
+error for euclidean distance 10.000 : 0.003935
+
+error for euclidean distance 9.750 : 0.003736
+
+error for euclidean distance 9.500 : 0.002254
+
+error for euclidean distance 9.250 : 0.004728
+
+error for euclidean distance 9.000 : 0.004071
+
+error for euclidean distance 8.750 : 0.004282
+
+error for euclidean distance 8.500 : 0.005845
+
+error for euclidean distance 8.250 : 0.005822
+
+error for euclidean distance 8.000 : 0.003063
+
+error for euclidean distance 7.750 : 0.003091
+
+error for euclidean distance 7.500 : 0.006247
+
+error for euclidean distance 7.250 : 0.004907
+
+error for euclidean distance 7.000 : 0.004409
+
+error for euclidean distance 6.750 : 0.007181
+
+error for euclidean distance 6.500 : 0.007505
+
+error for euclidean distance 6.250 : 0.005275
+
+error for euclidean distance 6.000 : 0.009963
+
+error for euclidean distance 5.750 : 0.013762
+
+error for euclidean distance 5.500 : 0.006226
+
+error for euclidean distance 5.250 : 0.003966
+
+error for euclidean distance 5.000 : 0.007943
+
+error for euclidean distance 4.750 : 0.008026
+
+error for euclidean distance 4.500 : 0.006605
+
+error for euclidean distance 4.250 : 0.013241
+
+error for euclidean distance 4.000 : 0.008967
+
+error for euclidean distance 3.750 : 0.007564
+
+error for euclidean distance 3.500 : 0.007721
+
+error for euclidean distance 3.250 : 0.008603
+
+error for euclidean distance 3.000 : 0.011171
+
+error for euclidean distance 2.750 : 0.005369
+
+error for euclidean distance 2.500 : 0.010047
+
+error for euclidean distance 2.250 : 0.004733
+
+error for euclidean distance 2.000 : 0.019971
+
+error for euclidean distance 1.750 : 0.007166
+
+error for euclidean distance 1.500 : 0.038575
+
+error for euclidean distance 1.250 : 0.047009
+
+error for euclidean distance 1.000 : 0.022119
+
+error for euclidean distance 0.750 : 0.048335
+
+error for euclidean distance 0.500 : 0.035437
+
+error for euclidean distance 0.250 : 0.200008
+
+error for euclidean distance 0.000 : 0.261594
+
+Executing repetition 15 of 30 total
+
+cpe prior for 0 with euclidean distance 10.000 = 0.33140406
+cpe prior for 1 with euclidean distance 10.000 = 0.32718431
+cpe prior for 2 with euclidean distance 10.000 = 0.33278856
+
+cpe prior for 0 with euclidean distance 9.750 = 0.33204987
+cpe prior for 1 with euclidean distance 9.750 = 0.32972066
+cpe prior for 2 with euclidean distance 9.750 = 0.34094465
+
+cpe prior for 0 with euclidean distance 9.500 = 0.33257450
+cpe prior for 1 with euclidean distance 9.500 = 0.32918340
+cpe prior for 2 with euclidean distance 9.500 = 0.32990277
+
+cpe prior for 0 with euclidean distance 9.250 = 0.32783089
+cpe prior for 1 with euclidean distance 9.250 = 0.33503566
+cpe prior for 2 with euclidean distance 9.250 = 0.32803553
+
+cpe prior for 0 with euclidean distance 9.000 = 0.33306736
+cpe prior for 1 with euclidean distance 9.000 = 0.33174016
+cpe prior for 2 with euclidean distance 9.000 = 0.33372335
+
+cpe prior for 0 with euclidean distance 8.750 = 0.33343912
+cpe prior for 1 with euclidean distance 8.750 = 0.33494440
+cpe prior for 2 with euclidean distance 8.750 = 0.32677474
+
+cpe prior for 0 with euclidean distance 8.500 = 0.33113851
+cpe prior for 1 with euclidean distance 8.500 = 0.33144437
+cpe prior for 2 with euclidean distance 8.500 = 0.33315214
+
+cpe prior for 0 with euclidean distance 8.250 = 0.33336167
+cpe prior for 1 with euclidean distance 8.250 = 0.32956486
+cpe prior for 2 with euclidean distance 8.250 = 0.33479603
+
+cpe prior for 0 with euclidean distance 8.000 = 0.32885988
+cpe prior for 1 with euclidean distance 8.000 = 0.32933953
+cpe prior for 2 with euclidean distance 8.000 = 0.33161929
+
+cpe prior for 0 with euclidean distance 7.750 = 0.33822964
+cpe prior for 1 with euclidean distance 7.750 = 0.33334615
+cpe prior for 2 with euclidean distance 7.750 = 0.32739248
+
+cpe prior for 0 with euclidean distance 7.500 = 0.33162396
+cpe prior for 1 with euclidean distance 7.500 = 0.32570373
+cpe prior for 2 with euclidean distance 7.500 = 0.33944004
+
+cpe prior for 0 with euclidean distance 7.250 = 0.33317263
+cpe prior for 1 with euclidean distance 7.250 = 0.33464493
+cpe prior for 2 with euclidean distance 7.250 = 0.33346309
+
+cpe prior for 0 with euclidean distance 7.000 = 0.34218984
+cpe prior for 1 with euclidean distance 7.000 = 0.33391065
+cpe prior for 2 with euclidean distance 7.000 = 0.34322179
+
+cpe prior for 0 with euclidean distance 6.750 = 0.34060974
+cpe prior for 1 with euclidean distance 6.750 = 0.33751657
+cpe prior for 2 with euclidean distance 6.750 = 0.33370542
+
+cpe prior for 0 with euclidean distance 6.500 = 0.32496963
+cpe prior for 1 with euclidean distance 6.500 = 0.33986751
+cpe prior for 2 with euclidean distance 6.500 = 0.35127830
+
+cpe prior for 0 with euclidean distance 6.250 = 0.34095451
+cpe prior for 1 with euclidean distance 6.250 = 0.33462974
+cpe prior for 2 with euclidean distance 6.250 = 0.32846778
+
+cpe prior for 0 with euclidean distance 6.000 = 0.34169280
+cpe prior for 1 with euclidean distance 6.000 = 0.32120931
+cpe prior for 2 with euclidean distance 6.000 = 0.32851230
+
+cpe prior for 0 with euclidean distance 5.750 = 0.33548779
+cpe prior for 1 with euclidean distance 5.750 = 0.32997522
+cpe prior for 2 with euclidean distance 5.750 = 0.33336156
+
+cpe prior for 0 with euclidean distance 5.500 = 0.32096716
+cpe prior for 1 with euclidean distance 5.500 = 0.33197997
+cpe prior for 2 with euclidean distance 5.500 = 0.35227529
+
+cpe prior for 0 with euclidean distance 5.250 = 0.33607716
+cpe prior for 1 with euclidean distance 5.250 = 0.32889324
+cpe prior for 2 with euclidean distance 5.250 = 0.31377158
+
+cpe prior for 0 with euclidean distance 5.000 = 0.32919268
+cpe prior for 1 with euclidean distance 5.000 = 0.32830681
+cpe prior for 2 with euclidean distance 5.000 = 0.34048863
+
+cpe prior for 0 with euclidean distance 4.750 = 0.33521962
+cpe prior for 1 with euclidean distance 4.750 = 0.34255233
+cpe prior for 2 with euclidean distance 4.750 = 0.33936209
+
+cpe prior for 0 with euclidean distance 4.500 = 0.33618583
+cpe prior for 1 with euclidean distance 4.500 = 0.33579327
+cpe prior for 2 with euclidean distance 4.500 = 0.33102446
+
+cpe prior for 0 with euclidean distance 4.250 = 0.34735240
+cpe prior for 1 with euclidean distance 4.250 = 0.33285956
+cpe prior for 2 with euclidean distance 4.250 = 0.34409004
+
+cpe prior for 0 with euclidean distance 4.000 = 0.36816164
+cpe prior for 1 with euclidean distance 4.000 = 0.34367285
+cpe prior for 2 with euclidean distance 4.000 = 0.35077832
+
+cpe prior for 0 with euclidean distance 3.750 = 0.32436965
+cpe prior for 1 with euclidean distance 3.750 = 0.33920781
+cpe prior for 2 with euclidean distance 3.750 = 0.34636389
+
+cpe prior for 0 with euclidean distance 3.500 = 0.33732619
+cpe prior for 1 with euclidean distance 3.500 = 0.32208507
+cpe prior for 2 with euclidean distance 3.500 = 0.33214983
+
+cpe prior for 0 with euclidean distance 3.250 = 0.30953294
+cpe prior for 1 with euclidean distance 3.250 = 0.34941616
+cpe prior for 2 with euclidean distance 3.250 = 0.32622697
+
+cpe prior for 0 with euclidean distance 3.000 = 0.33535150
+cpe prior for 1 with euclidean distance 3.000 = 0.32344285
+cpe prior for 2 with euclidean distance 3.000 = 0.33521058
+
+cpe prior for 0 with euclidean distance 2.750 = 0.35312487
+cpe prior for 1 with euclidean distance 2.750 = 0.32541794
+cpe prior for 2 with euclidean distance 2.750 = 0.34079594
+
+cpe prior for 0 with euclidean distance 2.500 = 0.34080966
+cpe prior for 1 with euclidean distance 2.500 = 0.29903923
+cpe prior for 2 with euclidean distance 2.500 = 0.34265037
+
+cpe prior for 0 with euclidean distance 2.250 = 0.33628048
+cpe prior for 1 with euclidean distance 2.250 = 0.32157214
+cpe prior for 2 with euclidean distance 2.250 = 0.31137347
+
+cpe prior for 0 with euclidean distance 2.000 = 0.35601764
+cpe prior for 1 with euclidean distance 2.000 = 0.29996046
+cpe prior for 2 with euclidean distance 2.000 = 0.34284407
+
+cpe prior for 0 with euclidean distance 1.750 = 0.36730055
+cpe prior for 1 with euclidean distance 1.750 = 0.30376882
+cpe prior for 2 with euclidean distance 1.750 = 0.35622166
+
+cpe prior for 0 with euclidean distance 1.500 = 0.38419595
+cpe prior for 1 with euclidean distance 1.500 = 0.33457655
+cpe prior for 2 with euclidean distance 1.500 = 0.32043102
+
+cpe prior for 0 with euclidean distance 1.250 = 0.28749487
+cpe prior for 1 with euclidean distance 1.250 = 0.35847851
+cpe prior for 2 with euclidean distance 1.250 = 0.35235563
+
+cpe prior for 0 with euclidean distance 1.000 = 0.29293346
+cpe prior for 1 with euclidean distance 1.000 = 0.33459517
+cpe prior for 2 with euclidean distance 1.000 = 0.30033698
+
+cpe prior for 0 with euclidean distance 0.750 = 0.16270719
+cpe prior for 1 with euclidean distance 0.750 = 0.36727589
+cpe prior for 2 with euclidean distance 0.750 = 0.32027554
+
+cpe prior for 0 with euclidean distance 0.500 = 0.29645576
+cpe prior for 1 with euclidean distance 0.500 = 0.32613739
+cpe prior for 2 with euclidean distance 0.500 = 0.27104949
+
+cpe prior for 0 with euclidean distance 0.250 = 0.06095967
+cpe prior for 1 with euclidean distance 0.250 = 0.61766409
+cpe prior for 2 with euclidean distance 0.250 = 0.55713592
+
+cpe prior for 0 with euclidean distance 0.000 = 0.00000000
+cpe prior for 1 with euclidean distance 0.000 = 0.00000000
+cpe prior for 2 with euclidean distance 0.000 = 0.26399212
+
+error for euclidean distance 10.000 : 0.002874
+
+error for euclidean distance 9.750 : 0.004169
+
+error for euclidean distance 9.500 : 0.002780
+
+error for euclidean distance 9.250 : 0.004168
+
+error for euclidean distance 9.000 : 0.000750
+
+error for euclidean distance 8.750 : 0.002758
+
+error for euclidean distance 8.500 : 0.001422
+
+error for euclidean distance 8.250 : 0.001753
+
+error for euclidean distance 8.000 : 0.003394
+
+error for euclidean distance 7.750 : 0.003617
+
+error for euclidean distance 7.500 : 0.005149
+
+error for euclidean distance 7.250 : 0.000534
+
+error for euclidean distance 7.000 : 0.006441
+
+error for euclidean distance 6.750 : 0.003944
+
+error for euclidean distance 6.500 : 0.010948
+
+error for euclidean distance 6.250 : 0.004594
+
+error for euclidean distance 6.000 : 0.008435
+
+error for euclidean distance 5.750 : 0.001847
+
+error for euclidean distance 5.500 : 0.010887
+
+error for euclidean distance 5.250 : 0.008915
+
+error for euclidean distance 5.000 : 0.005441
+
+error for euclidean distance 4.750 : 0.005711
+
+error for euclidean distance 4.500 : 0.002540
+
+error for euclidean distance 4.250 : 0.008417
+
+error for euclidean distance 4.000 : 0.020871
+
+error for euclidean distance 3.750 : 0.009290
+
+error for euclidean distance 3.500 : 0.005475
+
+error for euclidean distance 3.250 : 0.015663
+
+error for euclidean distance 3.000 : 0.004595
+
+error for euclidean distance 2.750 : 0.011723
+
+error for euclidean distance 2.500 : 0.017029
+
+error for euclidean distance 2.250 : 0.012223
+
+error for euclidean distance 2.000 : 0.021856
+
+error for euclidean distance 1.750 : 0.028807
+
+error for euclidean distance 1.500 : 0.021669
+
+error for euclidean distance 1.250 : 0.030002
+
+error for euclidean distance 1.000 : 0.024886
+
+error for euclidean distance 0.750 : 0.072542
+
+error for euclidean distance 0.500 : 0.035452
+
+error for euclidean distance 0.250 : 0.260169
+
+error for euclidean distance 0.000 : 0.245336
+
+Executing repetition 16 of 30 total
+
+cpe prior for 0 with euclidean distance 10.000 = 0.32843582
+cpe prior for 1 with euclidean distance 10.000 = 0.33099101
+cpe prior for 2 with euclidean distance 10.000 = 0.33311188
+
+cpe prior for 0 with euclidean distance 9.750 = 0.33093570
+cpe prior for 1 with euclidean distance 9.750 = 0.33213427
+cpe prior for 2 with euclidean distance 9.750 = 0.34403847
+
+cpe prior for 0 with euclidean distance 9.500 = 0.33370465
+cpe prior for 1 with euclidean distance 9.500 = 0.34012441
+cpe prior for 2 with euclidean distance 9.500 = 0.33975389
+
+cpe prior for 0 with euclidean distance 9.250 = 0.32945354
+cpe prior for 1 with euclidean distance 9.250 = 0.33003762
+cpe prior for 2 with euclidean distance 9.250 = 0.32582265
+
+cpe prior for 0 with euclidean distance 9.000 = 0.32962389
+cpe prior for 1 with euclidean distance 9.000 = 0.32690762
+cpe prior for 2 with euclidean distance 9.000 = 0.33384465
+
+cpe prior for 0 with euclidean distance 8.750 = 0.33420926
+cpe prior for 1 with euclidean distance 8.750 = 0.32748287
+cpe prior for 2 with euclidean distance 8.750 = 0.33065576
+
+cpe prior for 0 with euclidean distance 8.500 = 0.33359827
+cpe prior for 1 with euclidean distance 8.500 = 0.34076545
+cpe prior for 2 with euclidean distance 8.500 = 0.33947353
+
+cpe prior for 0 with euclidean distance 8.250 = 0.33379420
+cpe prior for 1 with euclidean distance 8.250 = 0.32852073
+cpe prior for 2 with euclidean distance 8.250 = 0.34238639
+
+cpe prior for 0 with euclidean distance 8.000 = 0.33634705
+cpe prior for 1 with euclidean distance 8.000 = 0.33593521
+cpe prior for 2 with euclidean distance 8.000 = 0.33436867
+
+cpe prior for 0 with euclidean distance 7.750 = 0.33510762
+cpe prior for 1 with euclidean distance 7.750 = 0.33738529
+cpe prior for 2 with euclidean distance 7.750 = 0.33243916
+
+cpe prior for 0 with euclidean distance 7.500 = 0.33614087
+cpe prior for 1 with euclidean distance 7.500 = 0.33147704
+cpe prior for 2 with euclidean distance 7.500 = 0.34047370
+
+cpe prior for 0 with euclidean distance 7.250 = 0.33715268
+cpe prior for 1 with euclidean distance 7.250 = 0.33166568
+cpe prior for 2 with euclidean distance 7.250 = 0.33798474
+
+cpe prior for 0 with euclidean distance 7.000 = 0.33153726
+cpe prior for 1 with euclidean distance 7.000 = 0.33983034
+cpe prior for 2 with euclidean distance 7.000 = 0.33762699
+
+cpe prior for 0 with euclidean distance 6.750 = 0.32784532
+cpe prior for 1 with euclidean distance 6.750 = 0.33778037
+cpe prior for 2 with euclidean distance 6.750 = 0.33305453
+
+cpe prior for 0 with euclidean distance 6.500 = 0.34027368
+cpe prior for 1 with euclidean distance 6.500 = 0.33712941
+cpe prior for 2 with euclidean distance 6.500 = 0.34281150
+
+cpe prior for 0 with euclidean distance 6.250 = 0.34240511
+cpe prior for 1 with euclidean distance 6.250 = 0.34059414
+cpe prior for 2 with euclidean distance 6.250 = 0.34463033
+
+cpe prior for 0 with euclidean distance 6.000 = 0.34224656
+cpe prior for 1 with euclidean distance 6.000 = 0.33696908
+cpe prior for 2 with euclidean distance 6.000 = 0.34861696
+
+cpe prior for 0 with euclidean distance 5.750 = 0.34570432
+cpe prior for 1 with euclidean distance 5.750 = 0.32552674
+cpe prior for 2 with euclidean distance 5.750 = 0.33094713
+
+cpe prior for 0 with euclidean distance 5.500 = 0.33149698
+cpe prior for 1 with euclidean distance 5.500 = 0.35220007
+cpe prior for 2 with euclidean distance 5.500 = 0.33268785
+
+cpe prior for 0 with euclidean distance 5.250 = 0.32984231
+cpe prior for 1 with euclidean distance 5.250 = 0.33901776
+cpe prior for 2 with euclidean distance 5.250 = 0.33847766
+
+cpe prior for 0 with euclidean distance 5.000 = 0.32602144
+cpe prior for 1 with euclidean distance 5.000 = 0.33631560
+cpe prior for 2 with euclidean distance 5.000 = 0.33666529
+
+cpe prior for 0 with euclidean distance 4.750 = 0.33189136
+cpe prior for 1 with euclidean distance 4.750 = 0.33733170
+cpe prior for 2 with euclidean distance 4.750 = 0.33615844
+
+cpe prior for 0 with euclidean distance 4.500 = 0.32758584
+cpe prior for 1 with euclidean distance 4.500 = 0.33291372
+cpe prior for 2 with euclidean distance 4.500 = 0.33875688
+
+cpe prior for 0 with euclidean distance 4.250 = 0.33840069
+cpe prior for 1 with euclidean distance 4.250 = 0.33296803
+cpe prior for 2 with euclidean distance 4.250 = 0.33739157
+
+cpe prior for 0 with euclidean distance 4.000 = 0.32731324
+cpe prior for 1 with euclidean distance 4.000 = 0.31630216
+cpe prior for 2 with euclidean distance 4.000 = 0.32342878
+
+cpe prior for 0 with euclidean distance 3.750 = 0.31837546
+cpe prior for 1 with euclidean distance 3.750 = 0.33859187
+cpe prior for 2 with euclidean distance 3.750 = 0.33189990
+
+cpe prior for 0 with euclidean distance 3.500 = 0.34513419
+cpe prior for 1 with euclidean distance 3.500 = 0.32273510
+cpe prior for 2 with euclidean distance 3.500 = 0.34071809
+
+cpe prior for 0 with euclidean distance 3.250 = 0.32726892
+cpe prior for 1 with euclidean distance 3.250 = 0.31503977
+cpe prior for 2 with euclidean distance 3.250 = 0.31567037
+
+cpe prior for 0 with euclidean distance 3.000 = 0.36519986
+cpe prior for 1 with euclidean distance 3.000 = 0.33216189
+cpe prior for 2 with euclidean distance 3.000 = 0.31518557
+
+cpe prior for 0 with euclidean distance 2.750 = 0.31777604
+cpe prior for 1 with euclidean distance 2.750 = 0.33692767
+cpe prior for 2 with euclidean distance 2.750 = 0.32140211
+
+cpe prior for 0 with euclidean distance 2.500 = 0.34967452
+cpe prior for 1 with euclidean distance 2.500 = 0.33073045
+cpe prior for 2 with euclidean distance 2.500 = 0.37561667
+
+cpe prior for 0 with euclidean distance 2.250 = 0.34618266
+cpe prior for 1 with euclidean distance 2.250 = 0.34308205
+cpe prior for 2 with euclidean distance 2.250 = 0.32361051
+
+cpe prior for 0 with euclidean distance 2.000 = 0.33833401
+cpe prior for 1 with euclidean distance 2.000 = 0.33036580
+cpe prior for 2 with euclidean distance 2.000 = 0.33432810
+
+cpe prior for 0 with euclidean distance 1.750 = 0.32940823
+cpe prior for 1 with euclidean distance 1.750 = 0.35411738
+cpe prior for 2 with euclidean distance 1.750 = 0.38320322
+
+cpe prior for 0 with euclidean distance 1.500 = 0.28801836
+cpe prior for 1 with euclidean distance 1.500 = 0.27372375
+cpe prior for 2 with euclidean distance 1.500 = 0.29755396
+
+cpe prior for 0 with euclidean distance 1.250 = 0.38292063
+cpe prior for 1 with euclidean distance 1.250 = 0.38050045
+cpe prior for 2 with euclidean distance 1.250 = 0.35590037
+
+cpe prior for 0 with euclidean distance 1.000 = 0.44329403
+cpe prior for 1 with euclidean distance 1.000 = 0.27434018
+cpe prior for 2 with euclidean distance 1.000 = 0.34935795
+
+cpe prior for 0 with euclidean distance 0.750 = 0.23924037
+cpe prior for 1 with euclidean distance 0.750 = 0.26938372
+cpe prior for 2 with euclidean distance 0.750 = 0.30010630
+
+cpe prior for 0 with euclidean distance 0.500 = 0.35069347
+cpe prior for 1 with euclidean distance 0.500 = 0.21841064
+cpe prior for 2 with euclidean distance 0.500 = 0.33400991
+
+cpe prior for 0 with euclidean distance 0.250 = 0.16710681
+cpe prior for 1 with euclidean distance 0.250 = 0.57856838
+cpe prior for 2 with euclidean distance 0.250 = 0.36330996
+
+cpe prior for 0 with euclidean distance 0.000 = 0.00000000
+cpe prior for 1 with euclidean distance 0.000 = 1.00000000
+cpe prior for 2 with euclidean distance 0.000 = 0.45280986
+
+error for euclidean distance 10.000 : 0.002487
+
+error for euclidean distance 9.750 : 0.004767
+
+error for euclidean distance 9.500 : 0.004528
+
+error for euclidean distance 9.250 : 0.004895
+
+error for euclidean distance 9.000 : 0.003549
+
+error for euclidean distance 8.750 : 0.003135
+
+error for euclidean distance 8.500 : 0.004612
+
+error for euclidean distance 8.250 : 0.004776
+
+error for euclidean distance 8.000 : 0.002217
+
+error for euclidean distance 7.750 : 0.002240
+
+error for euclidean distance 7.500 : 0.003935
+
+error for euclidean distance 7.250 : 0.003379
+
+error for euclidean distance 7.000 : 0.004196
+
+error for euclidean distance 6.750 : 0.003405
+
+error for euclidean distance 6.500 : 0.006738
+
+error for euclidean distance 6.250 : 0.009210
+
+error for euclidean distance 6.000 : 0.009278
+
+error for euclidean distance 5.750 : 0.007521
+
+error for euclidean distance 5.500 : 0.007116
+
+error for euclidean distance 5.250 : 0.004773
+
+error for euclidean distance 5.000 : 0.004542
+
+error for euclidean distance 4.750 : 0.002755
+
+error for euclidean distance 4.500 : 0.003864
+
+error for euclidean distance 4.250 : 0.003164
+
+error for euclidean distance 4.000 : 0.010985
+
+error for euclidean distance 3.750 : 0.007217
+
+error for euclidean distance 3.500 : 0.009928
+
+error for euclidean distance 3.250 : 0.014007
+
+error for euclidean distance 3.000 : 0.017062
+
+error for euclidean distance 2.750 : 0.010361

@@ -118,5 +118,5 @@ plt.title('CPE errors for %d clusters with %d repetitions' %(n_clusters, totalRe
 plt.xlabel('Euclidean Distance')
 plt.ylabel('Mean Error')
 plt.legend(loc='best')
-plt.savefig('../output/cpeDistTest/%dClusters%dRepetitions.png' %(n_clusters, totalRepetitions))
+plt.savefig('../output/cpeDistTest/%dClusters%dRepetitions.pdf' %(n_clusters, totalRepetitions))
 plt.clf()
