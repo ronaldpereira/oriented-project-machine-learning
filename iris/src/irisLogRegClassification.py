@@ -67,8 +67,7 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     fpr["micro"], tpr["micro"], _ = roc_curve(y_test, y_predict)
     roc_auc["micro"] = auc(fpr["micro"], tpr["micro"])
 
-    plt.figure()
-# plt.figure()
+    # plt.figure()
     # lw = 2
     # plt.plot(fpr[0], tpr[0], color='darkorange',
     #         lw=lw, label='ROC curve (area = %0.2f)' % roc_auc[0])
@@ -80,9 +79,11 @@ for specie in ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']:
     # plt.title('Receiver operating characteristic for ' + specie + 'using positive size = ' + sys.argv[2])
     # plt.legend(loc="lower right")
     # plt.savefig('../output/logReg/' + sys.argv[2] + '/' + specie + '.png')
+    # plt.clf()
     
     plotData.append((specie, fpr[0], tpr[0], roc_auc[0]))
 
+plt.figure()
 lw = 2
 
 for specie, fpr, tpr, roc_auc in plotData:
@@ -96,3 +97,4 @@ plt.ylabel('True Positive Rate')
 plt.title('Receiver Operating Characteristic using Logistic Regression model')
 plt.legend(loc="lower right")
 plt.savefig('../output/logReg/graphics/logregroc.pdf')
+plt.clf()
