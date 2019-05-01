@@ -1,5 +1,6 @@
 __pycache__
 .vscode
+.ipynb_checkpoints
 iris/output/pu_gauss/10/
 iris/output/pu_gauss/20/
 iris/output/pu_gauss/30/
